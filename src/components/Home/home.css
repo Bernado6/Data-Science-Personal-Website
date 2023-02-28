@@ -1,0 +1,81 @@
+header{
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.header_container{
+    text-align: left;
+    height: 100%;
+    /*  position: relative; */
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+}
+
+
+.cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: left;
+}
+
+/* =====Header Socials======= */
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
+    position: absolute;
+    left: 15rem;
+    bottom: -5;
+    padding-top: 20px;
+    cursor: pointer;
+    color: #f96014;
+}
+
+.img{
+
+    margin-left: 20px;
+    opacity: 0;
+    width: 32px;
+    height: auto;
+    animation: rotateIn 1s linear both;
+    animation-delay: 1.4s;
+      
+}
+
+.scroll_down{
+    position: absolute;
+    right: -5rem;
+    bottom: -1rem;
+    top: 60%;
+    transform: rotate(90deg);
+
+}
+
+/* ====Media Queries (Medium Services) */
+@media screen and (max-width: 1024px){
+    header {
+        height: 68vh;
+    }
+
+}
+
+/* ====Media Queries (Small Services) */
+@media screen and (max-width: 600px){
+    header {
+        height: 100vh;
+    }
+
+    .scroll_down{
+        display: none;
+    }
+    
+}
