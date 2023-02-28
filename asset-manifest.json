@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Bernado6/Final-Personal-Website/static/css/main.64847845.css",
+    "main.js": "/Bernado6/Final-Personal-Website/static/js/main.33c93b57.js",
+    "static/media/portfolio1.png": "/Bernado6/Final-Personal-Website/static/media/portfolio1.69157883a432478d9834.png",
+    "static/media/portfolio03.png": "/Bernado6/Final-Personal-Website/static/media/portfolio03.6a5b744a9ae419d179b4.png",
+    "static/media/portfolio2.png": "/Bernado6/Final-Personal-Website/static/media/portfolio2.b086b4358a0b1dd57e95.png",
+    "static/media/portfolio02.png": "/Bernado6/Final-Personal-Website/static/media/portfolio02.13a0325e41a925a3b0d4.png",
+    "static/media/portfolio4.png": "/Bernado6/Final-Personal-Website/static/media/portfolio4.59e5d64b8819ca7357fb.png",
+    "static/media/Benard-CV.pdf": "/Bernado6/Final-Personal-Website/static/media/Benard-CV.da8487e7413a5168ec1c.pdf",
+    "static/media/me.jpg": "/Bernado6/Final-Personal-Website/static/media/me.838151a8279f3ba2e9fe.jpg",
+    "index.html": "/Bernado6/Final-Personal-Website/index.html",
+    "main.64847845.css.map": "/Bernado6/Final-Personal-Website/static/css/main.64847845.css.map",
+    "main.33c93b57.js.map": "/Bernado6/Final-Personal-Website/static/js/main.33c93b57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64847845.css",
+    "static/js/main.33c93b57.js"
+  ]
+}
