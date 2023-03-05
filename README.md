@@ -95,4 +95,8 @@ Your app is ready to be deployed!
     * Select the CloudFront distribution that you created in step 4.
     * Click on the "General" tab and copy the "Domain Name".
     * Paste the CloudFront domain name into your web browser to access your website.
-By following these detailed steps, you can host your static React website in AWS S3 and access it securely only through CloudFront. This will help you to serve your website content faster and more securely to users around the world.
+
+By following these detailed steps, you can host your static React website in AWS S3 and access it securely only through CloudFront as shown below. This will help you to serve your website content faster and more securely to users around the world.
+
+#### Accessing my website portfolio through Cloudfront DNS
+![Website](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/Website.png)
