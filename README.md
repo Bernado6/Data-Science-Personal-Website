@@ -27,44 +27,69 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment(Hosted in AWS s3 Bucket)
 
-### `npm run eject`
+ Below are the detailed steps to host a static React website in AWS S3 and access it only through CloudFront:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Create a private S3 bucket to host your static website:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    * Go to the AWS Management Console and navigate to the S3 service.
+    * Click on the "Create bucket" button and give your bucket a name and   choose your desired region.
+    * In the "Block Public Access settings for this bucket" section, uncheck all the options to ensure that the bucket is private.
+    * Keep the default settings and click on the "Create bucket" button.
+2. **Upload your React website files to the S3 bucket:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    * Select the bucket that you created in the previous step.
+    * Click on the "Upload" button and select the files you want to upload.
+    * Keep the default settings and click on the "Upload" button.
+3. **Configure the S3 bucket to disallow public access to the website files:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    * Select the bucket that you uploaded your website files to.
+    * Click on the "Permissions" tab and scroll down to the "Bucket Policy" section.
+    * Click on the "Edit" button to open the bucket policy editor.
+    * Enter the following bucket policy to disallow public access to your website files:
+        json
+        ```{json}
+        {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::your-bucket-name/*"
+            }
+        ]
+        }
+        ```
+    Replace your-bucket-name with the name of the bucket you created in step 1.
 
-## Learn More
+    * Click on the "Save" button to save the bucket policy.
+4. **Create a CloudFront distribution for your website:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * Go to the AWS Management Console and navigate to the CloudFront service.
+    * Click on the "Create Distribution" button and choose "Web".
+    * In the "Origin Domain Name" field, select your S3 bucket from the dropdown list.
+    * Keep the default settings and click on the "Create Distribution" button.
+5. **Configure CloudFront to use your S3 bucket as the origin for your website:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    * Select the CloudFront distribution that you created in the previous step.
+    * Click on the "Behaviors" tab and click on the "Create Behavior" button.
+    * Enter the following settings:
+        * Path Pattern: *
+        * Origin: Select your S3 bucket from the dropdown list
+        * Viewer Protocol Policy: Redirect HTTP to HTTPS
+    * Click on the "Create" button to save the behavior.
+6. Set up CloudFront to serve your website over HTTPS:
 
-### Code Splitting
+    * Select the CloudFront distribution that you created in step 4.
+    * Click on the "General" tab and scroll down to the "SSL Certificate" section.
+    * Choose "Custom SSL Certificate" and select or upload your SSL certificate.
+    * Click on the "Save Changes" button to save the SSL certificate.
+7. Use the CloudFront domain name to access your website:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    * Go to the AWS Management Console and navigate to the CloudFront service.
+    * Select the CloudFront distribution that you created in step 4.
+    * Click on the "General" tab and copy the "Domain Name".
+    * Paste the CloudFront domain name into your web browser to access your website.
+By following these detailed steps, you can host your static React website in AWS S3 and access it securely only through CloudFront. This will help you to serve your website content faster and more securely to users around the world.
