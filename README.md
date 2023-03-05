@@ -29,6 +29,7 @@ Your app is ready to be deployed!
 
 ## Deployment(Hosted in AWS s3 Bucket)
 
+### AWS Architectural Diagram
 ![Architecture Diagram](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/Architecture%20Diagram.png)
 
  Below are the detailed steps to host a static React website in AWS S3 and access it only through CloudFront:
