@@ -1,0 +1,133 @@
+.timeline-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.timeline-card {
+  background: var(--color-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.timeline-card-header {
+  background: var(--color-primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  height: 50%;
+}
+
+.timeline-card-header h3{
+  color: var(--color-bg);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.timeline-card-header h2{
+  color: var(--color-bg);
+  /* font-size: 1rem; */
+  text-align: center;
+}
+
+.timeline-card-header p{
+  color: var(--color-bg);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.timeline-card-body {
+  background: var(--color-bg-variant);
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.timeline-card-body:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+  border-radius: 1rem;
+}
+
+.cert_view{
+  /* display: flex; */
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-left: 6rem;
+}
+
+.view{
+  width: max-content;
+  /* display: inline-block; */
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 25px; 
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+  margin-left: 2rem ;
+
+}
+
+/* Tablet styles */
+@media screen and (max-width: 1024px) {
+  .timeline-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline-card {
+    max-width: 800px;
+  }
+  
+  .cert_view {
+    margin-left: 15rem;
+  }
+  
+  .view {
+    margin-left: 1rem;
+  }
+}
+
+/* Phone styles */
+@media screen and (max-width: 600px) {
+  .timeline-container {
+    gap: 5rem;
+  }
+
+  .timeline-card {
+    max-width: 100%;
+    border-radius: 0;
+  }
+  
+  .timeline-card-header {
+    border-radius: 0;
+  }
+  
+  .cert_view {
+    margin-left: 0;
+    margin-left: 5rem;
+  }
+  
+  .view {
+    margin-left: 0;
+  }
+}
+
+

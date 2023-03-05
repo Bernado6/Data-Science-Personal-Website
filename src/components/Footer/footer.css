@@ -1,5 +1,6 @@
 footer{
-    background: var(--color-primary);
+    /* background: var(--color-primary); */
+    background: #CCC7B9;
     padding: 3rem;
     text-align: center;
     font-size: 0.9rem;
@@ -18,12 +19,22 @@ footer a{
 
 }
 
+.footer_logo:hover{
+    color: #800000 !important;
+
+}
+
 .permalinks{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     margin: 0 auto 3rem;
+}
+
+.permalinks a:hover{
+    color: #800000 !important;
+    
 }
 
 .footer_socials{
@@ -48,6 +59,8 @@ footer a{
     color: var(--color-bg);
     border-color: var(--color-bg);
 }
+
+
 
 .footer_copyright{
     margin-bottom: 4rem;

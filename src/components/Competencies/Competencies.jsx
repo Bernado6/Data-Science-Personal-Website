@@ -1,14 +1,17 @@
 import React from 'react';
-import './experience.css';
+import './competencies.css';
 import {HiShieldCheck} from 'react-icons/hi';
+import Fade  from "react-reveal/Fade";
 
-const Experience = () => {
+const Competencies = () => {
   return (
-    <section id='experience'>
-      <h5>My Core Skills</h5>
+    <section id='competencies'>
+      <h5>My Core Competencies</h5>
+      <Fade left  duration = {600} delay = {20}>
       <h2>Data Science</h2>
       <div className="container experience_container">
         <div className="experience_frontend">
+          
           <h3>Data Science Tools</h3>
           <div className="experience_content">
 
@@ -59,9 +62,11 @@ const Experience = () => {
                 <small className='text-light'>Experienced</small>
               </div>
             </article>
-
+          
           </div>
         </div>
+        {/* </Fade  >
+        <Fade right  duration = {6000} delay = {1500}> */}
         <div className="experience_backend">
         <h3>Data Science Skills</h3>
           <div className="experience_content">
@@ -114,13 +119,16 @@ const Experience = () => {
               </div>
             </article>
 
-          </div>      
+          </div>
         </div>
+        {/* </Fade> */}
       </div>
       {/* End of Data Science  */}
+      
 
       <h2>Web Development</h2>
       <div className="container experience_container">
+      {/* <Fade left  duration = {2000} delay = {300}> */}
         <div className="experience_frontend">
           <h3>Frontend Development</h3>
           <div className="experience_content">
@@ -175,6 +183,8 @@ const Experience = () => {
 
           </div>
         </div>
+        {/* </Fade>
+        <Fade left  duration = {2000} delay = {300}> */}
         <div className="experience_backend">
         <h3>Backend Development</h3>
           <div className="experience_content">
@@ -229,11 +239,13 @@ const Experience = () => {
 
           </div>      
         </div>
+        {/* </Fade> */}
       </div>
       {/* End of Web Dev */}
 
       <h2>AWS Cloud Computing</h2>
       <div className="container experience_container">
+      {/* <Fade left duration= {3000} delay={500}> */}
         <div className="experience_frontend">
           <h3>What i can do</h3>
           <div className="experience_content">
@@ -288,6 +300,8 @@ const Experience = () => {
 
           </div>
         </div>
+        {/* </Fade>
+        <Fade right duration= {6000} delay={1500}> */}
         <div className="experience_backend">
         <h3>Skilled On</h3>
           <div className="experience_content">
@@ -343,9 +357,11 @@ const Experience = () => {
           </div>      
         </div>
       </div>
+      </Fade>
+      
 
     </section>
   )
 }
 
-export default Experience
+export default Competencies;

@@ -4,6 +4,7 @@ import {MdEmail} from 'react-icons/md';
 import {BsWhatsapp} from 'react-icons/bs';
 import {AiFillTwitterCircle} from 'react-icons/ai';
 import emailjs from 'emailjs-com';
+import Fade from 'react-reveal/Fade';
 
 const Contact = () => {
 
@@ -25,6 +26,7 @@ const Contact = () => {
     <section id = 'contact'>
       <h5>Get in touch</h5>
       <h2>Contact Me</h2>
+      <Fade left delay={100} duration={1000}>
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
@@ -56,7 +58,7 @@ const Contact = () => {
         <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>
-
+      </Fade>
     </section>
   )
 }

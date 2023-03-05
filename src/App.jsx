@@ -1,25 +1,30 @@
 import React from 'react';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
-import Experience from './components/Experience/Experience';
-import Testimonials from './components/Testimonials/Testimonials';
+import Competencies from './components/Competencies/Competencies';
+import Reviews from './components/Reviews/Reviews';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Portfolio from './components/Portfolio/Portfolio';
 import Services from './components/Services/Services';
 import ScrollToTop from 'react-scroll-to-top';
+import NavbarMobileView from './components/NavbarMobileView/NavbarMobileView';
+import Timeline from './components/Timeline/Timeline';
+import './App.css';
 
 const App = () => {
   return (
     <>
       <Navbar/>
+      <NavbarMobileView/>
       <Home/>
       <About/>
-      <Experience/>
-      <Services/>
+      <Competencies/>
       <Portfolio/>
-      <Testimonials/>
+      <Timeline/>
+      <Services/>
+      <Reviews/>
       <Contact/>
       <Footer/>
 

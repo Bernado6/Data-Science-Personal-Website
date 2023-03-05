@@ -1,5 +1,5 @@
 import React from 'react';
-import './testimonials.css';
+import './reviews.css';
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
@@ -10,36 +10,27 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Zoom from "react-reveal/Zoom";
 
 const data = [
   {
-    name: 'James Lee',
-    review: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam.'
+    name: 'Asha Ali',
+    review: 'Good morning Ben the classes and the  assignment was 👌🏾plus the pdf on factors affecting systolic blood pressure was eye opening. I feel like my STATA skills are well polished. Thank you!'
 
   },
   {
-    name: 'James Lee',
-    review: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam.'
-
-  },
-  {
-    name: 'James Lee',
-    review: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam.'
-
-  },
-  {
-    name: 'James Lee',
-    review: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam.'
+    name: 'Austine Tanyases',
+    review: 'OK I have seen it. Thanks for assisting me in the STATA Program where I faced challenges. Your classes were good. Be blessed. 💯💯'
 
   }
 ]
 
-const Testimonials = () => {
+const Reviews = () => {
   return (
-    <section id = "testimonials">
-      <h5>Review from Clients</h5>
-      <h2>Testimonials</h2>
-
+    <section id = "reviews">
+      <h5>Client Reviews</h5>
+      <h2>Reviews</h2>
+      <Zoom duration = {900} delay={100}>
       <Swiper className="container testimonials_container" 
       // install Swiper modules
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
@@ -64,8 +55,9 @@ const Testimonials = () => {
           }) 
         }
       </Swiper>
+      </Zoom>
     </section>
   )
 }
 
-export default Testimonials
+export default Reviews;

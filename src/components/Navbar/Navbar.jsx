@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./navbar.css";
 import { Link } from 'react-scroll';
+import { FcHome } from 'react-icons/fc';
 
 
 const Navbar = () => {
@@ -20,45 +21,100 @@ const Navbar = () => {
     window.addEventListener("scroll", onChangeNavColor);
     return(
         <nav className={navScrollColor ? "nav-scroll-color navbar-main":"navbar-main"}>
-            <ul>
+            <div className='container-fluid view-header'>
+                <a href="#home"> 
+                <FcHome size = {25}/>
+                </a>
+
+            </div>
+            
+            <ul>          
                
                 <li className="nav-item">
-                <Link to = "home" spy = {true} smooth = {true} offset = {-100} duration = {100}>
+                <Link 
+                to = "home" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
                     Home
                 </Link>
                 </li>            
                 
                 <li className="nav-item">
-                <Link to = "about" spy = {true} smooth = {true} offset = {-100} duration = {100}>
+                <Link 
+                to = "about" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
                     About
                 </Link>
                 </li>
                 
                 <li className="nav-item">
-                <Link to = "services" spy = {true} smooth = {true} offset = {-100} duration = {100}>
+                <Link 
+                to = "competencies" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
+                    Competencies
+                </Link>
+                </li>
+
+                <li className="nav-item">
+                <Link 
+                to = "portfolio" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
+                    Projects
+                </Link>
+                </li>
+
+                <li className="nav-item">
+                <Link 
+                to = "timeline" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
+                    Timeline
+                    </Link>
+                </li>
+
+                <li className="nav-item">
+                <Link 
+                to = "services" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
                     Service
                     </Link>
                 </li>
 
-                <li className="nav-item">
-                <Link to = "experience" spy = {true} smooth = {true} offset = {-100} duration = {100}>
-                    Experience
-                </Link>
-                </li>
 
                 <li className="nav-item">
-                <Link to = "portfolio" spy = {true} smooth = {true} offset = {-100} duration = {100}>
-                    Portfolio
-                </Link>
-                </li>
-
-                <li className="nav-item">
-                <Link to = "career" spy = {true} smooth = {true} offset = {-100} duration = {100}>
-                    Career
+                <Link 
+                to = "reviews" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
+                    Reviews
                     </Link>
                 </li>
+
                 <li className="nav-item">
-                <Link to = "contact" spy = {true} smooth = {true} offset = {-100} duration = {100}>
+                <Link 
+                to = "contact" 
+                spy = {true} 
+                smooth = {true} 
+                offset = {-100} 
+                duration = {100}>
                     Contact
                 </Link>
                 </li>

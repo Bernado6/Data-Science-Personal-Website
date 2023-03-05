@@ -1,0 +1,62 @@
+.mobile-view-header{
+    width: 100%;
+    background-color: #00022E;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.mobile-view-header p svg{
+    cursor: pointer;
+    color: white;
+    margin-top: 15px;
+    margin-left: 1.2rem;
+}
+
+.mobile-nav{
+    height: auto;
+    width: 170px;
+    background-color: #00022E;
+    margin-top: 10px;
+}
+
+.responsive-mobile-view{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.mobile-nav ul li{
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 1.5rem;
+
+    top: 0;
+    z-index: 1;
+}
+
+@media (min-width:900px) {
+    .responsive-mobile-view{
+        display: none;
+    }
+    
+}
+
+@media (max-width:890px){
+    .mobile-nav{
+        display: flex;
+    }
+
+    .mobile-nav{
+        display: flex;
+        z-index: 1;
+    }
+
+    .testimonials_container {
+        z-index: -1;
+    }
+
+}

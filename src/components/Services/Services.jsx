@@ -1,6 +1,7 @@
 import React from 'react';
 import './services.css';
 import {BsFillCheckCircleFill} from 'react-icons/bs';
+import Zoom from "react-reveal/Zoom";
 
 const Services = () => {;
  
@@ -8,8 +9,8 @@ const Services = () => {;
     <section id='services'>
       <h5>Offered Services</h5>
       <h2>Services</h2>
-
       <div className="container services_container">
+        <Zoom duration= {600} delay = {20}>
         <article className='service'>
           <div className='service_title'>
             <h3>AWS Cloud Services</h3>
@@ -38,8 +39,12 @@ const Services = () => {;
           </ul>
 
         </article>
+        
         {/* End of Cloud Services */}
         {/*  */}
+        
+        </Zoom>
+        <Zoom duration= {700} delay = {40}>
         <article className='service'>
           <div className='service_title'>
             <h3>Data Science</h3>
@@ -68,6 +73,9 @@ const Services = () => {;
           </ul>
 
         </article>
+        </Zoom>
+
+        <Zoom duration ={900} delay = {60}>
 
         <article className='service'>
           <div className='service_title'>
@@ -91,8 +99,8 @@ const Services = () => {;
               <p>Gym Websites</p>
             </li>
           </ul>
-
         </article>
+        </Zoom>
       </div>
     </section>
   )
