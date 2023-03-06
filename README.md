@@ -36,10 +36,14 @@ Your app is ready to be deployed!
 
 1. **Create a private S3 bucket to host your static website:**
 
-    * Go to the AWS Management Console and navigate to the S3 service.
+    * Go to the AWS Management Console and navigate to Services>Storage>S3.
+    ![S3](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-1.png)
     * Click on the "Create bucket" button and give your bucket a unique name and   choose your desired region.
+    ![Create bucket](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-2.png)
+
+    ![unique name](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-3.png)
     * In the "Block Public Access settings for this bucket" keep the default    settings to ensure that the bucket is private.
-    * Keep the default settings and click on the "Create bucket" button.
+    * Keep other default settings and click on the "Create bucket" button at the end.
 2. **Upload your React website files to the S3 bucket:**
     
     * Option 1
