@@ -40,10 +40,11 @@ Your app is ready to be deployed!
     ![S3](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-1.png)
     * Click on the "Create bucket" button and give your bucket a unique name and   choose your desired region.
     ![Create bucket](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-2.png)
-
     ![unique name](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-3.png)
     * In the "Block Public Access settings for this bucket" keep the default    settings to ensure that the bucket is private.
+    ![block](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-4.png)
     * Keep other default settings and click on the "Create bucket" button at the end.
+    ![click create](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/s3-5.png)
 2. **Upload your React website files to the S3 bucket:**
     
     * Option 1
@@ -51,7 +52,7 @@ Your app is ready to be deployed!
         * Click on the "Upload" button and select the files you want to upload.
         * Keep the default settings and click on the "Upload" button.
 
-    * Option 2, Upload using CLI
+    * Option 2, upload using CLI
         * Given that you have allowed programmatic access, you can use the command below;
             * First confirm that you can access your aws account by checking the buckets you have using the command;
             ```{bash}
