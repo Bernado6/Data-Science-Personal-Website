@@ -98,7 +98,7 @@ const NavbarMobileView = ({theme, handleChangeTheme}) => {
                     offset = {-400} 
                     duration = {100}
                     onClick = {handleLinkClick}>
-                        Service
+                        Services
                         </Link>
                     </li>    
      

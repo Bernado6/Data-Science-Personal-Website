@@ -1,6 +1,6 @@
 # Benard Kipngeno Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This portfolio was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -27,9 +27,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-## Deployment(Hosted in AWS s3 Bucket)
+## Deployment(Hosted in AWS s3 Bucket and accessible through cloudfront only)
 
-### AWS Architectural Diagram
+### Deployment AWS Architectural Diagram
 ![Architecture Diagram](https://github.com/Bernado6/Final-Personal-Website/blob/master/src/assets/Architecture%20Diagram.png)
 
  Below are the detailed steps to host a static React website in AWS S3 and access it only through CloudFront:
@@ -72,15 +72,24 @@ Your app is ready to be deployed!
         json
         ```{json}
         {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-            "Effect": "Deny",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::your-bucket-name/*"
-            }
-        ]
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": "*",
+                    "Action": "s3:GetObject",
+                    "Resource": "arn:aws:s3:::bucket-name/*"
+                },
+                {
+                    "Sid": "2",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E28E8JVZSD4TYS"
+                    },
+                    "Action": "s3:GetObject",
+                    "Resource": "arn:aws:s3:::bucket-name/*"
+                }
+            ]
         }
         ```
     Replace your-bucket-name with the name of the bucket you created in step 1.

@@ -92,7 +92,7 @@ const Navbar = () => {
                 smooth = {true} 
                 offset = {-100} 
                 duration = {100}>
-                    Service
+                    Services
                     </Link>
                 </li>
 
